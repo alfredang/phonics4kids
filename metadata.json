@@ -1,0 +1,7 @@
+{
+  "name": "PhonixQuest: Interactive Phonics",
+  "description": "A gamified, evidence-based phonics learning adventure for ages 9-15. Master sounds, blending, rules, and intonation through interactive lessons and games.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
