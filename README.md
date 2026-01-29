@@ -8,7 +8,7 @@ PhonixQuest is a vibrant, interactive phonics learning platform designed to make
 
 PhonixQuest transforms phonics education into an epic adventure. It covers everything from basic letter sounds to complex blending rules across five magical worlds:
 
-*   **📍 Level 1: Letters Land** - Master the A-Z alphabet sounds (Short Vowels & Consonants).
+*   **📍 Level 1: Letters Land** - Master the complete set of 44 English phonemes (Short Vowels, Consonants, Digraphs, and more).
 *   **📍 Level 2: Blend Bridge** - Learn to slide sounds together (Blends like "ST").
 *   **📍 Level 3: Rule City** - Discover secret phonics rules (like the Magic Silent E).
 *   **📍 Level 4: Rhythm Road** - Practice sentence reading and intonation.
