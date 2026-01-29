@@ -71,6 +71,14 @@ const LessonView: React.FC<Props> = ({ lessonId, onExit, onComplete }) => {
         setIsPlayingAudio(false);
     };
 
+    const handlePreviousStep = () => {
+        if (step === LessonStep.PRACTICE) setStep(LessonStep.LISTEN);
+        else if (step === LessonStep.PLAY) setStep(LessonStep.PRACTICE);
+        else if (step === LessonStep.ASSESS) setStep(LessonStep.PLAY);
+        setFeedback(null);
+        setTranscript('');
+    };
+
     const handleMicClick = () => {
         if (isListening) return;
         setIsListening(true);
@@ -107,20 +115,20 @@ const LessonView: React.FC<Props> = ({ lessonId, onExit, onComplete }) => {
         <div className="flex flex-col h-full">
             {/* Header */}
             <div className="flex items-center justify-between mb-6 px-4">
-                <button onClick={onExit} className="flex items-center space-x-2 text-white/70 hover:text-white font-bold p-2 px-4 bg-white/10 hover:bg-white/20 rounded-full transition-all group">
+                <button onClick={onExit} className="flex items-center space-x-2 text-slate-500 hover:text-brand-primary font-bold p-2 px-4 bg-slate-100 hover:bg-slate-200 rounded-full transition-all group">
                     <X size={20} className="group-hover:rotate-90 transition-transform" />
                     <span>Home</span>
                 </button>
                 <div className="flex space-x-2">
                     {[LessonStep.LISTEN, LessonStep.PRACTICE, LessonStep.PLAY, LessonStep.ASSESS].map((s, i) => (
-                        <div key={s} className={`h-2 w-12 sm:w-16 rounded-full transition-colors ${step === s ? 'bg-brand-secondary shadow-[0_0_10px_rgba(236,72,153,0.5)]' : 'bg-white/20'}`} />
+                        <div key={s} className={`h-2 w-12 sm:w-16 rounded-full transition-all duration-500 ${step === s ? 'bg-brand-secondary shadow-[0_0_10px_rgba(236,72,153,0.5)]' : 'bg-slate-200'}`} />
                     ))}
                 </div>
-                <div className="font-heading font-bold text-white text-lg hidden sm:block">{lesson.title}</div>
+                <div className="font-heading font-bold text-slate-800 text-lg hidden sm:block">{lesson.title}</div>
             </div>
 
             {/* Main Content Card */}
-            <main className="flex-1 bg-white/90 backdrop-blur-xl rounded-3xl shadow-2xl p-6 md:p-10 relative overflow-hidden flex flex-col items-center mx-4 mb-4 border border-white/40">
+            <main className="flex-1 bg-white/90 backdrop-blur-xl rounded-3xl shadow-2xl p-6 md:p-10 relative flex flex-col items-center mx-4 mb-4 border border-white/40 overflow-y-auto">
 
                 <AnimatePresence mode="wait">
 
@@ -263,7 +271,16 @@ const LessonView: React.FC<Props> = ({ lessonId, onExit, onComplete }) => {
                 </AnimatePresence>
 
                 {/* Footer Navigation */}
-                <div className="mt-auto w-full flex justify-end pt-8 border-t border-slate-100">
+                <div className="mt-auto w-full flex justify-between items-center pt-8 border-t border-slate-100 sticky bottom-0 bg-white/80 py-4">
+                    {step !== LessonStep.LISTEN ? (
+                        <button
+                            onClick={handlePreviousStep}
+                            className="text-slate-400 hover:text-slate-600 font-bold flex items-center px-6 py-4 transition-colors"
+                        >
+                            <RefreshCw size={20} className="mr-2 rotate-180" /> Back
+                        </button>
+                    ) : <div />}
+
                     <button
                         onClick={handleNextStep}
                         className="bg-brand-primary hover:bg-indigo-600 text-white px-10 py-4 rounded-xl font-bold text-lg flex items-center shadow-lg hover:shadow-xl transition-all hover:scale-105 active:scale-95"
