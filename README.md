@@ -36,8 +36,8 @@ PhonixQuest is a vibrant, interactive phonics learning platform designed to make
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/alfredang/phonics4kids.git
-   cd phonics4kids
+   git clone https://github.com/alfredang/PhonixQuest.git
+   cd PhonixQuest
    ```
 
 2. **Install dependencies:**
