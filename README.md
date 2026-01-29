@@ -1,5 +1,7 @@
 # 🚀 PhonixQuest: Interactive Phonics Explorer
 
+**Live Demo:** [https://alfredang.github.io/PhonixQuest/](https://alfredang.github.io/PhonixQuest/)
+
 PhonixQuest is a vibrant, interactive phonics learning platform designed to make learning to read fun and engaging for children. Combining modern web technologies with AI-powered feedback, PhonixQuest guides young learners through a series of "missions" to master letters, sounds, and word formation.
 
 <div align="center">
