@@ -65,6 +65,17 @@ Follow these steps to set up PhonixQuest on your local machine for development.
     ```
     The app will be available at `http://localhost:3000` (or `3001` if 3000 is busy).
 
+### 🛡️ Agent Knowledge & Skills
+
+This project includes localized AI Agent skills to ensure consistent development and architectural patterns.
+
+*   **📍 Phonics Pedagogy:** Standard logic for the 44 English phonemes.
+*   **📍 Premium UI Standards:** Patterns for the dark-blue theme and side navigation.
+*   **📍 Gemini Integration:** Best practices for real-time voice feedback.
+*   **📍 CI/CD Workflows:** Automated deployment guides for static hosting.
+
+These are stored in the `.agent/skills` and `.claude/skills` directories.
+
 ### 🚢 Deployment
 
 This project is set up to automatically deploy to **GitHub Pages** using GitHub Actions. Any push to the `main` branch will trigger a build and update the live site.

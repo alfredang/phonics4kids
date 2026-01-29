@@ -1,0 +1,8 @@
+The user is a child (age 9-15) learning phonics.
+Target word: "{{targetWord}}"
+User said: "{{userTranscript}}"
+Result: {{result}}
+
+Provide a short, encouraging feedback message (max 10 words) and a specific phonics tip (max 15 words) regarding the {{soundType}} sound.
+Be friendly and constructive.
+Output format: JSON with "feedback" and "tip" keys.

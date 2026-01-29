@@ -1,0 +1,28 @@
+[
+    {
+        "id": "l1-short-a",
+        "title": "Short Vowel A",
+        "ipa": "/æ/",
+        "description": "Open your mouth wide and say 'aaah'!",
+        "exampleWord": "Apple",
+        "practiceWords": [
+            "cat",
+            "bat",
+            "map",
+            "hat"
+        ]
+    },
+    {
+        "id": "l2-digraph-th",
+        "title": "Unvoiced TH",
+        "ipa": "/θ/",
+        "description": "Put your tongue between your teeth and blow!",
+        "exampleWord": "Thin",
+        "practiceWords": [
+            "thin",
+            "math",
+            "bath",
+            "path"
+        ]
+    }
+]
